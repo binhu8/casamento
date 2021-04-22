@@ -2,7 +2,7 @@ const express = require('express')
 const server = express()
 const  cors = require('cors')
 const router = express.Router()
-
+let porta = process.env.PORT || 8080
 const fs = require('fs')
 
 server.use(express.json({extended: true}))
@@ -51,6 +51,6 @@ router.delete('/', (req, res)=>{
 
 server.use(router)
 
-server.listen(3003, ()=>{
-    console.log('Servidor online em: ', 'http://localhost:3003/')
+server.listen(porta, ()=>{
+    console.log('Servidor online em: ', `http://localhost:${porta}`)
 })
