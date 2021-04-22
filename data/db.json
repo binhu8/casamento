@@ -2,17 +2,17 @@
     {
         "id": 1,
         "nome": "Faqueiro",
-        "escolhido": true
+        "escolhido": false
     },
     {
         "id": 2,
         "nome": "Marinex",
-        "escolhido": true
+        "escolhido": false
     },
     {
         "id": 3,
         "nome": "Panela de pressão",
-        "escolhido": true
+        "escolhido": false
     },
     {
         "id": 4,
@@ -32,7 +32,7 @@
     {
         "id": 7,
         "nome": "Conjunto cama Queen",
-        "escolhido": true
+        "escolhido": false
     },
     {
         "id": 8,
@@ -47,7 +47,7 @@
     {
         "id": 10,
         "nome": "Tábua de passar",
-        "escolhido": true
+        "escolhido": false
     },
     {
         "id": 11,
