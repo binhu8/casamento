@@ -1,0 +1,185 @@
+
+
+
+@media screen and (max-width: 375px){
+    .titulo h1{
+        font-size: 35px;
+    }
+
+    .baixoConvite{
+        
+        right: -70px !important;
+    }
+
+    .sobre-noivos{
+        height: 250vh  !important;
+    }
+
+    .nossa-historia{
+        padding-bottom: 1rem ;
+        height: 180vh !important;
+
+    }
+    
+    .card-nossa-historia{
+        height: 90% !important;
+    }
+
+}
+
+
+@media screen and (max-width: 1000px){
+   
+
+    .navbar  {
+        width: 100%;
+        align-items: center;
+        padding: 0;
+    }
+  
+    .navlinks ul{
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        background: red;
+    }
+
+    .slide{
+        width: 100%;
+        height: 50vh;
+    }
+
+    .imgSlide2.active, .imgSlide{
+       background-size: 190%;
+    }
+
+    .descricao h2{
+        font-size: 40px;
+        font-family: 'Petit Formal Script', cursive;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .dias, .horas, .minutos, .segundos{
+        width: 80px;
+        height: 110px;
+        margin: 5px;
+    }
+
+    .convite-card{
+        width: 90%;
+        height: 70%;
+       
+    }
+    img.topoConvite, 
+    img.baixoConvite{
+        width: 200px;
+    }
+
+    .titulo-sobre h2, 
+    .titulo-nossa-historia h2,
+    .titulo-galeria h2{
+        font-size: 25px;
+    }
+
+
+    .sobre-noivos{
+        width: 100%;
+        height: 200vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        
+    }
+
+   
+    .card-noivos-container{
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        padding: 0.5rem;
+
+    }
+
+    .card-noivos-container img{
+       display: none;    
+    }
+
+    .card-noivos-moldura{
+       width: 95%;
+        height: 45%;
+        padding: 0.5rem;
+        border: 8px solid transparent;
+        border-image: linear-gradient(to right, rgba(51, 0, 0, 0.932) , rgb(214, 97, 1), rgb(58, 15, 4) , rgb(58, 15, 4), rgb(231, 106, 3));
+        border-image-slice: 1;
+        -webkit-box-shadow: 0px -1px 49px -18px rgb(0, 0, 0);
+        -moz-box-shadow: 0px -1px 49px -18px rgb(0, 0, 0);
+        box-shadow: 0px -1px 49px -18px rgb(0, 0, 0);
+    }
+    .titulo-nossa-historia img,
+    .titulo-galeria img{
+        width: 100px;
+    }
+    .titulo-nossa-historia{
+        margin-bottom: 5px;
+    }
+    .titulo-galeria img{
+        display: none;
+    }
+
+    .nossa-historia{
+        width: 100%;
+        height: 160vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 1rem;
+    }
+    .card-nossa-historia{
+        width: 90%;
+        height: 90%;
+    }
+
+    .encontro img{
+       display: none;
+    }
+
+    .descricao-encontro:nth-child(even),
+    .descricao-encontro:nth-child(odd){
+        width: 100%; 
+        text-align: left;
+    }
+
+    .nossa-historia::before,
+    .nossa-historia::after{
+        display: none;
+     }   
+
+     .galeria{
+        width: 100%;
+        height: 80vh;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+     .card-galeria{
+        width: 100%;
+    }
+
+    .foto-horizontal{
+        width: 100%;
+        height: 100px;
+    }
+
+    .foto-vertical{
+        width: 100%;
+        height: 180px;
+    }
+    
+
+}

@@ -1,0 +1,85 @@
+.container-lista{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-lista p{
+    font-family: 'Lato';
+    color: #000;
+    font-weight: 300;
+    text-align: center;
+}
+
+.card-lista{
+    width: 90%;
+    height: 85%;
+    margin-top: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-box-shadow: 0px 1px 7px 3px rgba(0,0,0,0.35); 
+    box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.171);
+}
+
+.row{
+
+    height: 60px;
+    border: 1px solid grey;
+    display: flex;
+    margin: 5px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0.5rem;
+}
+
+.icon{
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem; 
+}
+
+.icon img{
+    width: 100%;
+}
+
+.item{
+    width: 55%;
+    height: 100%;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.item p{
+    font-size: 18px;
+    font-family: "Lato";
+    font-weight: 400;
+    color: #333;
+}
+
+.choose{
+    width: 110px;
+    height: 80%;
+    background-color: rgb(241, 79, 74);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+
+}
+
+.choose p{
+    font-size: 15px;
+    font-family: 'Lato';
+    color: #fafafa;
+}
