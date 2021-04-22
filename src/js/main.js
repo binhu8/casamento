@@ -53,14 +53,11 @@ function main(){
     
     button.forEach((element,index) => {
         element.addEventListener('click', ()=>{
+            let button  = document.querySelectorAll('.choose');
             atualizarApi(`https://fabiogabriela.herokuapp.com/${index + 1}`)
 
-            let data = pegarApi('https://fabiogabriela.herokuapp.com/')
-            let lista = JSON.parse(data)
-    
-            lista.forEach((element) => {
-                mostraNaPage(element)
-            });
+            element.style.background = "grey"
+            element.innerHTML = "<p>Escolhido</p>"
         })
     })
     lista.forEach((element) => {
