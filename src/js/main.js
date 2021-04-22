@@ -41,7 +41,7 @@ function mostraNaPage(element){
 }
 
 function main(){
-    let data = pegarApi('http://localhost:3003/')
+    let data = pegarApi('https://fabiogabriela.herokuapp.com/')
     
     let lista = JSON.parse(data)
     
@@ -53,9 +53,9 @@ function main(){
     
     button.forEach((element,index) => {
         element.addEventListener('click', ()=>{
-            atualizarApi(`http://localhost:3003/${index + 1}`)
+            atualizarApi(`https://fabiogabriela.herokuapp.com/${index + 1}`)
 
-            let data = pegarApi('http://localhost:3003/')
+            let data = pegarApi('https://fabiogabriela.herokuapp.com/')
             let lista = JSON.parse(data)
     
             lista.forEach((element) => {
