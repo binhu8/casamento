@@ -1,3 +1,8 @@
+main{
+    position: relative;
+    overflow: hidden;
+}
+
 .container-lista{
     width: 100%;
     height: 100vh;
@@ -82,4 +87,52 @@
     font-size: 15px;
     font-family: 'Lato';
     color: #fafafa;
+}
+
+.alerta.active{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10%;
+    animation: poupup 3s ease;
+    opacity: 1;
+}
+
+.alerta{
+  opacity: 0;
+}
+
+.container-alerta{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(1, 78, 24, 0.904);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 7px 3px rgba(0,0,0,0.35); 
+    box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.171);
+}
+
+.container-alerta p{
+  font-size: 20px;
+  font-family: "lato";
+  font-weight: 300;
+  color: #fafafa;
+}
+
+
+@keyframes poupup{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(281%)
+    }
+    100%{
+        transform: translateY(0%)
+    }
 }

@@ -2,7 +2,7 @@ const express = require('express')
 const server = express()
 const  cors = require('cors')
 const router = express.Router()
-let porta = process.env.PORT || 8080
+let porta = process.env.PORT || 3003
 const fs = require('fs')
 
 server.use(express.json({extended: true}))
@@ -38,8 +38,14 @@ router.put('/:id', (req, res)=>{
     
     const conteudoAtual = lerArquivo();
     const itemSelecionado = conteudoAtual.findIndex((itemAtual)=> itemAtual.id == id )
-    conteudoAtual[itemSelecionado].escolhido = true
-    conteudoAtual[itemSelecionado].total --
+    
+    if(conteudoAtual[itemSelecionado].total <= 0){
+        conteudoAtual[itemSelecionado].escolhido = true
+    }else{
+        conteudoAtual[itemSelecionado].total --
+    }
+   
+    
     escreverArquivo(conteudoAtual)
     res.send(conteudoAtual)
 })

@@ -1,4 +1,4 @@
-
+let alerta = document.querySelector('.alerta')
 
 function pegarApi(url){
     let request = new XMLHttpRequest();
@@ -16,7 +16,7 @@ function atualizarApi(url){
 }
 
 
-function mostraNaPage(element){
+function mostraNaPage(element, button, corButton){
     let card = document.querySelector('#cardList')
     
     let row = `<div class="row">
@@ -28,8 +28,8 @@ function mostraNaPage(element){
                             ${element.nome}
                         </p>
                     </div>
-                    <button class="choose">
-                        <p>Escolher</p>
+                    <button style="background: ${corButton}" class="choose">
+                        <p >${button}</p>
                     </button>
                 </div>`
 
@@ -46,8 +46,16 @@ function main(){
     let lista = JSON.parse(data)
     
     lista.forEach((element) => {
-        mostraNaPage(element)
-        console.log(element)
+        if(element.total <= 0){
+            console.log('estoque de', element.nome, ' zerado')
+          
+            mostraNaPage(element,"Indisponível", "grey")
+        }else{
+            mostraNaPage(element,"Disponível", "red")
+        }
+
+       
+        // console.log(element)
     });
 
     let button  = document.querySelectorAll('.choose');
@@ -57,18 +65,19 @@ function main(){
             let button  = document.querySelectorAll('.choose');
 
             
-            atualizarApi(`https://fabiogabriela.herokuapp.com/${index + 1}`)
+           
 
-            element.style.background = "grey"
-            element.innerHTML = "<p>Escolhido</p>"
+            element.style.background = "green"
+            element.innerHTML = "<p>Selecionado</p>"
+
+            alerta.classList.add('active')
+            setTimeout(function(){
+                alerta.classList.remove('active')
+                atualizarApi(`https://fabiogabriela.herokuapp.com/${index + 1}`)
+            },2500)
         })
     })
-    lista.forEach((element) => {
-        if(element.escolhido == true){
-            button[element.id -1].style.background = "grey"
-            button[element.id -1].innerHTML = "<p>Escolhido</p>"
-        }
-    });
+    
 }
 
 main()
