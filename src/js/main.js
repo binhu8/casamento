@@ -47,6 +47,7 @@ function main(){
     
     lista.forEach((element) => {
         mostraNaPage(element)
+        console.log(element)
     });
 
     let button  = document.querySelectorAll('.choose');
@@ -54,6 +55,8 @@ function main(){
     button.forEach((element,index) => {
         element.addEventListener('click', ()=>{
             let button  = document.querySelectorAll('.choose');
+
+            
             atualizarApi(`https://fabiogabriela.herokuapp.com/${index + 1}`)
 
             element.style.background = "grey"

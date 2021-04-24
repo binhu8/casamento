@@ -39,14 +39,11 @@ router.put('/:id', (req, res)=>{
     const conteudoAtual = lerArquivo();
     const itemSelecionado = conteudoAtual.findIndex((itemAtual)=> itemAtual.id == id )
     conteudoAtual[itemSelecionado].escolhido = true
+    conteudoAtual[itemSelecionado].total --
     escreverArquivo(conteudoAtual)
     res.send(conteudoAtual)
 })
 
-
-router.delete('/', (req, res)=>{
-    res.send('oi')
-})
 
 
 server.use(router)
