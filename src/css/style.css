@@ -7,6 +7,10 @@
     list-style: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 strong{
     color: rgb(255, 120, 96);
 }
